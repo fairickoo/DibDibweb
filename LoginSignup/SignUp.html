@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <title>Login</title>
+        <title>Sign Up</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/template/Global.css"> <!-- change -> /template/Global.css  -->
-        <link rel="stylesheet" href="Login.css"> <!-- Edit name for import Css of this document -->
+        <link rel="stylesheet" href="SignUp.css"> <!-- Edit name for import Css of this document -->
     </header>
     <body class="BGG">
         <div class="parent-BG">
@@ -37,38 +37,37 @@
             <div class="contain-col-2-Form DS-SS">
                 <form action="">
                     <div class="section-row-1">
-                        <h1 class="HeadingX4 ENG rc-Primary">Login</h1><br class="brr md-h20">
-                        <p class="ParagraphX1 ENG rc-Primary">Don't have an account yet?</p><br class="brr md-h5">
-                        <a href="SignUp.html" target="_parent"><p class="sigup ParagraphX1 ENG rc-Accent">Sign up now</p></a>
+                        <h1 class="HeadingX4 ENG rc-Primary">Create an account</h1><br class="brr md-h20">
+                        <p class="ParagraphX1 ENG rc-Primary">Already have an account?</p><br class="brr md-h5">
+                        <a href="Login.html" target="_parent"><p class="sigup ParagraphX1 ENG rc-Accent">Login</p></a>
+
                     </div>
                     <div class="section-row-2">
-                            <span class="ParagraphX2 ENG rc-Primary">Email</span><br class="brr md-h15">
-                            <input class="input-login" type="email" name="email"> 
+                            <span class="ParagraphX2 ENG rc-Primary">First Name</span><br class="brr md-h5">
+                            <input class="input-login" type="text" name="email"> 
                     </div>
                     <div class="section-row-3">
-                            <span class="ParagraphX2 ENG rc-Primary">Password</span><br class="brr md-h15">
-                            <input class="input-login" type="password"name="password">   
+                            <span class="ParagraphX2 ENG rc-Primary">Last Name</span><br class="brr md-h5">
+                            <input class="input-login" type="text" name="email">   
                     </div>
                     <div class="section-row-4">
-                        <input class="btn-login rc-BG ENG HeadingX6" type="submit" value="Submit"><br class="brr md-h20">
-                        <p id="openPopUp-forgot" class="forgot ParagraphX1 ENG rc-Accent">Forgot password?</p>
+                        <span class="ParagraphX2 ENG rc-Primary">Email</span><br class="brr md-h5">
+                            <input class="input-login"  type="email" name="email">  
+                    </div>
+                    <div class="section-row-5">
+                            <span class="ParagraphX2 ENG rc-Primary">Password</span><br class="brr md-h5">
+                            <input class="input-login" type="password"name="password">   
+                    </div>
+                    <div class="section-row-6">
+                            <span class="ParagraphX2 ENG rc-Primary">Confirm Password</span><br class="brr md-h5">
+                            <input class="input-login" type="password"name="confirm-password">   
+                    </div>
+                    <div class="section-row-7">
+                        <input class="btn-login rc-BG ENG HeadingX6" type="submit" value="Sign Up"><br class="brr md-h20">
                     </div>
                 </form>
             </div>
         </div> 
-
-        <!--  pop up forgot pass word-->
-        <div id="popUp-forgot" class="modal">
-            <div class="modal-content DS-SS">
-                <span class="close"> <i class="material-icons rc-Secondary">close</i></span>
-                <h1 class="HeadingX4 ENG rc-Primary">Reset Password</h1><br class="brr md-h10">
-                <p class="ParagraphX1 ENG rc-Primary">Enter your email for a password reset link.</p><br class="brr md-h25">
-                <span class="ParagraphX2 ENG rc-Secondary">Email</span><br class="brr md-h10">
-                <input class="input-login" type="email" name="email"> <br class="brr md-h35">
-                <input onclick="sentResetLink()" class="btn-login rc-BG ENG HeadingX6" type="submit" value="Send Reset Link">
-            </div>
-          </div>
-          
         <!--  wave -->
         <footer class="container-wave">
             <svg id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 490" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -87,21 +86,5 @@
     </body>
 </html>
 <script>
-var modal = document.getElementById("popUp-forgot");
-var btn = document.getElementById("openPopUp-forgot");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-span.onclick = function() {
-  modal.style.display = "none";
-}
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-function sentResetLink () {
-    alert("The system has successfully sent a link to reset your password.")
-}
+ 
 </script>
