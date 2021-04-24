@@ -161,6 +161,8 @@ footer.container-wave {
 }
 .forgot{
     cursor: pointer;
+    background: #000;
+    width: 50px;
 }
 
 
