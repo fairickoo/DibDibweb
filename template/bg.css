@@ -11,6 +11,7 @@ footer.container-wave {
     bottom: -5px;
     width: 100%;
     overflow: hidden;
+    z-index: 0;/* wave อยู่ชั้นที่ 0 ถ้าจะเอามาทับ ต้องใส่อันนั้นเป็น ชั้นที่ 1 2 3..*/
     /*opacity: 0.5; ทำ wave จางตรงนี้เลยจ้า */
 }
 
