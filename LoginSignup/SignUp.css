@@ -131,8 +131,11 @@ footer.container-wave {
    /* background: rgb(238, 27, 133);*/
 }
 
-.sigup{
+.login{
     cursor: pointer;
+}
+.no-line{
+    text-decoration: none
 }
 .input-login{
     width: 400px;

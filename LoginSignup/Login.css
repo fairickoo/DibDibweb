@@ -105,6 +105,9 @@ footer.container-wave {
 .sigup{
     cursor: pointer;
 }
+.no-line{
+    text-decoration: none
+}
 .input-login{
     width: 400px;
     height: 52px;
