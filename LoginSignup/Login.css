@@ -119,6 +119,8 @@ footer.container-wave {
     padding: 10px 10px 10px 10px;
     font-size: 16px;
 }
+
+/*---------------------- CSS Grid --------------------------------*/
 .section-row-2 { 
     grid-area: 2 / 2 / 3 / 3;
     margin-bottom: 25px;
@@ -133,6 +135,8 @@ footer.container-wave {
     grid-area: 4 / 2 / 5 / 3;
     /* background: rgb(238, 27, 133);*/
 }
+
+
 .btn-login{
     background-color: var(--Accent);
     box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
