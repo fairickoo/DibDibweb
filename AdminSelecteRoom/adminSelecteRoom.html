@@ -108,18 +108,26 @@
                         <p class="HeadingX6 ENG rc-Primary in-line"><b>ECC-602</b></p>
                         <p class="ParagraphX1 ENG rc-Primary in-line">STM32-nucleo f767zi</p><br>
                         <br>
+                      
                         <form action="/action_page.php">
                             <input type="datetime-local" id="dateTimeCurrent" name="dateTimeCurrent">
                         </form>
-                            <i onclick="document.form1.input1.value++" class="material-icons md-24 rc-Primary ">add</i>
-                            <i onclick="document.form1.input1.value--" class="material-icons md-24 rc-Primary ">remove</i>
-                        </form>
-                        <form name=form1>
-                            <input name=input1 value="1" size=10 
+                        <div class="add-remove">
+                        <div class="left">
+                            <i onclick="document.form1.input1.value--" class="btn-remove material-icons md-24 rc-Primary ">remove</i>
+                        </div>
+                        <form name=form1 >
+                            <input class="input-num" name=input1 value="1" size=10 
                             onfocus="buffer=this.value" 
                             onchange="if (isNaN(this.value)) 
                             { this.value=buffer}"
                         >
+                        <div class="right">
+                            <i onclick="document.form1.input1.value++" class="btn-plus material-icons md-24 rc-Primary ">add</i>
+                        </div>
+                        <br><br>
+                        <input  class="btn-pop-add rc-BG TH ParagraphX1 " type="submit" value="เพิ่ม">
+                        </div>
                     </div>
                 </div>
                 <!--  pop up del-->
