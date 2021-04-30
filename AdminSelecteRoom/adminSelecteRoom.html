@@ -189,10 +189,15 @@
 var dt = new Date();
 document.getElementById("datetime").innerHTML = (("0"+dt.getDate()).slice(-2)) +"/"+ (("0"+(dt.getMonth()+1)).slice(-2)) +"/"+ (dt.getFullYear()) +" "+ (("0"+dt.getHours()).slice(-2)) +":"+ (("0"+dt.getMinutes()).slice(-2));
 
-//form-add
+
 var modalAdd = document.getElementById("popUp-add");
 var btnAdd = document.getElementById("openPopUp-add");
 var spanAdd = document.getElementsByClassName("close-add")[0];
+
+var modalDel = document.getElementById("popUp-del");
+var btnDel = document.getElementById("openPopUp-del");
+var spanDel = document.getElementsByClassName("close-del")[0];
+//form-add
 btnAdd.onclick = function() {
     modalAdd.style.display = "block";
 }
@@ -203,9 +208,7 @@ spanAdd.onclick = function() {
     modalAdd.style.display = "none";
 }
 //form-remove
-var modalDel = document.getElementById("popUp-del");
-var btnDel = document.getElementById("openPopUp-del");
-var spanDel = document.getElementsByClassName("close-del")[0];
+
 spanDel.onclick = function() {
     modalDel.style.display = "none";
 }
@@ -229,6 +232,5 @@ function logout(){
     if (!logout){
         document.getElementById("checkLogout").href="./adminSelecteRoom.html"; 
     }
-    
 }
 </script>
