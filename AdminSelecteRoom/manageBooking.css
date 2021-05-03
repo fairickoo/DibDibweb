@@ -5,6 +5,7 @@ body.BGG{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
 }
 footer.container-wave {
     position: fixed;
@@ -20,6 +21,94 @@ footer.container-wave {
 
 /*---- container gride-----*/
 /*  nav 1 */
+.topnav {
+    overflow: hidden;
+}
+.topnav a , .topnav p {
+  float: left;
+  text-align: center;
+  padding: 14px 30px;
+  text-decoration: none;
+}
+.topnav a:hover{
+    color: var(--Accent);
+}
+/* nav 2 */
+.room-name{
+    overflow: hidden;
+    /*background: rgb(212, 56, 56);*/
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.room-name a,.room-name p {
+    float: left;
+    /*padding: 14px 10px;*/
+    padding-right: 10px;
+    padding-bottom: 14px;
+}
+.icon-back{
+    position: relative;
+    bottom: -4px;
+}
+.noti-cart {
+    position: relative;
+    bottom: 15px;
+    left:3px;
+    background-color: var(--Error);
+}
+mark{
+    padding: 3px;
+    border-radius: 100px;
+}
+.btn-add{
+    background-color: var(--Success);
+    box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
+    border-radius: 6px;
+    width: 100px; 
+    height: 34px;
+    border-style: none;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.btn-add:hover{
+    background :#0f8672;
+}
+.a-right{
+    text-align: right;
+}
+.li-hi{
+    margin-top: 4px;
+}
+
+.right {
+  float: right;
+}
+.left {
+    float: left;
+}
+.in-line{
+    display: inline;
+}
+
+/*------ content --------*/
+
+
+
+/*----- col 2  form -----*/
+.contain-col-2-history { 
+    /*background: rgb(47, 30, 194);*/
+    z-index: 1;
+    margin-left: 30px;
+    margin-right: 30px;  
+}
+.month-sel{
+    margin-bottom: 20px;
+}
+.scroll-table{
+    overflow: auto;
+    height: 700px;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 7px;
@@ -40,154 +129,57 @@ footer.container-wave {
   ::-webkit-scrollbar-thumb:hover {
     background: #bbbbbb; 
 }
-.topnav {
-    overflow: hidden;
-    
-}
-.topnav a  {
-  float: left;
-  text-align: center;
-  padding: 14px 30px;
-  text-decoration: none;
-}
-.topnav a:hover{
-    color: var(--Accent);
-}
-/* nav 2 */
-.room-name{
-    overflow: hidden;
-    /*background: rgb(212, 56, 56);*/
-    margin-left: 30px;
-    margin-right: 30px;
-}
-.room-name a,.room-name p {
-    float: left;
-    /*padding: 14px 10px;*/
-    padding-right: 10px;
-    padding-bottom: 30px;
-}
-.icon-back{
+.update-text{
     position: relative;
-    bottom: -4px;
-}
-.btn-add{
-    background-color: var(--Success);
-    box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
-    border-radius: 6px;
-    width: 100px; 
-    height: 34px;
-    border-style: none;
-    margin-right: 30px;
-    cursor: pointer;
-}
-.btn-del{
-    background-color: var(--Warning);
-    box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
-    border-radius: 6px;
-    width: 100px; 
-    height: 34px;
-    border-style: none;
-    cursor: pointer;
-}
-.btn-add-del{
-    margin-top: 10px;
-    
-}
-.btn-add:hover{
-    background :#0f8672;
-}
-.btn-del:hover{
-    background :#d6974a;
-}
-.li-hi{
-    margin-top: 4px;
-}
-.right {
-  float: right;
-}
-.left {
-    float: left;
-}
-.in-line{
-    display: inline;
-}
-
-/*------ content --------*/
-.parent-BG{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    height: 700px;
-}
-
-
-/*----- col 1 Logo -----*/
-.contain-col-1-preview { 
-    grid-area: 1 / 1 / 6 / 2; 
-    /*background: rgb(182, 40, 40);*/
-    z-index: 1;
-}
-.card-preview{
-    height: 650px;
-    width: 400px;
-    background: var(--Bright);
-    margin-left: 35px;
-    border-radius: 8px;
-    padding-left: 30px;
-}
-.img-card{
-    width: 100%;
-    border-radius: 8px;
-    padding: 30px;
-}
-.btn-manage{
-    background-color: var(--Accent);
-    box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
-    border-radius: 6px;
-    width: 340px; 
-    height: 40px;
-    border-style: none;
-    margin-top: 30px;
-    cursor: pointer;
-}
-.btn-manage:hover {
-    background-color: #086a91;
-}
-
-
-/*----- col 2  form -----*/
-.contain-col-2-history { 
-    grid-area: 1 / 2 / 6 / 5;
-    /*background: rgb(47, 30, 194);*/
-    z-index: 1;
-    height: 700px;
-    margin-left: 10px;
-    margin-right: 30px;
-    
-}
-.scroll{
-    width:100%;
-    height:700px; 
-    overflow: auto;
-   
+    bottom: 10px;
 }
 .w3-table{
+    
     background:var(--Bright);
 }
 .hd-table {
+    
     background:  #E0E0E0;
+    
 }
 .container-table{
+    
     background: #000;
 }
+th,td {
+  
+  border: 1px solid rgb(233, 233, 233);
+  width: 160px;
+  overflow: hidden;
+}
 
+td.book {
+    background: rgba(0, 247, 95, 0.3) 
+}
+td.full{
+    
+    background: rgba(59, 59, 59, 0.3) ;
+}
+.remain:hover,.full:hover,.book:hover{
+    background-color:rgba(82, 150, 253, 0.3) 
+}
+td.remain{
+    cursor: pointer;
+
+    
+}
+.unselectable {
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 /* pop up Content 'add' */
-.modal {
-    display: none; 
+.modal { 
+    display: none;
     position: fixed;
-    z-index: 2; 
+    z-index: 1; 
     left: 0;
     top: 0;
     width: 100%;
@@ -211,7 +203,7 @@ footer.container-wave {
 }
 
    /*  Close Button */
-   .close-add, .close-del {
+   .close-book  {
     float: right;
     height: 24px;
     width: 24px;
@@ -219,14 +211,14 @@ footer.container-wave {
     margin-right: -16px;
   }
   
-  .close-add:hover,
-  .close-add:focus,.close-del:hover,.close-del:focus {
+  .close-book:hover,
+  .close-book:focus{
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
-.btn-pop-add{
-    background-color: var(--Success);
+.btn-pop-book{
+    background-color: var(--Accent);
     box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
     border-radius: 6px;
     width: 100px; 
@@ -246,8 +238,8 @@ footer.container-wave {
     margin-top: 30px; 
     box-shadow: 0px 2px 4px rgba(44, 39, 56, 0.08), 0px 4px 8px rgba(44, 39, 56, 0.08);
 }
-.btn-pop-add:hover{
-    background :#0f8672;
+.btn-pop-book:hover{
+    background-color: #086a91;
 }
 .btn-pop-remove:hover{
     background: rgb(197, 58, 58);
@@ -256,6 +248,7 @@ footer.container-wave {
     width: 200px;
     color: var(--Primary);
     padding: 3px;
+    padding-left:10px;
     border: 1px solid #DBE2EA;
     box-sizing: border-box;
     box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
@@ -285,16 +278,17 @@ footer.container-wave {
     height: 26px;
     text-align: center; 
 }
-
-
+.warn-text{
+    margin-top: 30px;
+}
 .add-remove-text{
-    padding :35px;
-    margin-left: 20px;
+    padding :30px;
+    margin-left: 10px;
     margin-right: 50px;
 }
 .add-remove{
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%,-50%);
     width: 130px;
