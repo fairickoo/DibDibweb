@@ -11,21 +11,20 @@
         <link rel="stylesheet" href="manageBooking.css"> <!-- Edit name for import Css of this document -->
     </header>
     <body class="BGG unselectable">
-        <div class="topnav">
+        <div class="topnav">    
             <div class="right">
-                
                 <a href="#"><i class="material-icons md-20 rc-Muted ">refresh</i></a>
                 <a class="ParagraphX2 ENG rc-Muted" href="#">Admin</a>
                 <a id="checkLogout" onclick="logout()"class="ParagraphX2 ENG rc-Muted" href="../LoginSignup/Login.html">Logout</a>
-            </div>
-        </div>
+            </div>      
+        </div>        
         <div class="room-name">
             <div class="left">
                 <a href="./adminSelecteRoom.html"><i class="icon-back material-icons md-24 rc-Primary ">arrow_back</i></a>
                 <p class="HeadingX6 ENG rc-Primary in-line " href="#"><b>ECC-602</b></p>
                 <p class="ParagraphX1 ENG rc-Primary in-line li-hi" >STM32-nucleo f767zi&nbsp;&nbsp;&nbsp;/</p><p class="ParagraphX1 TH rc-Primary in-line li-hi" >จัดการการจอง</p>
             </div>
-        </div>
+        </div> 
         <!-- righ -->
         <div class="contain-col-2-history ">
             <form class="month-sel" action="/action_page.php">
@@ -64,28 +63,57 @@
                     </table>
                 </div>
             </div> <!-- scroll-->
-            <!--  pop up add-->
-            <div id="popUp-book" class="modal">
+            <!--  pop up list-->
+            <div id="popUp-list" class="modal">
                 <div class="modal-content DS-SS">
-                    <span class="close-book"> <i class="material-icons rc-Secondary">close</i></span>
+                    <span class="close-list"> <i class="material-icons rc-Secondary">close</i></span>
                     <p class="HeadingX6 ENG rc-Primary in-line"><b>ECC-602</b></p>
                     <p class="ParagraphX1 ENG rc-Primary in-line">STM32-nucleo f767zi</p><br>
                     <br>
                     <p class="ParagraphX1 ENG rc-Primary in-line"><b>1/02/2021</b></p><p class="ParagraphX1 ENG rc-Primary in-line">&nbsp;&nbsp;&nbsp;<b>11:00 - 12:00 </b></p><p class="ParagraphX1 TH rc-Primary in-line">&nbsp;น.</p>
-                    
+                    <div  class="scroll-table-mem" >
+                        <div class="container-table ">
+                            <table class="w3-table w3-bordered "  >
+                                <thead class="hd-table ">
+                                    <tr >
+                                        <th><p class="ParagraphX1 ENG rc-Primary in-line">#</p></th>
+                                        <th><p class="ParagraphX1 ENG rc-Primary in-line ">First Name</p></th>
+                                        <th><p class="ParagraphX1 ENG rc-Primary in-line">Last Name</p></th>
+                                        <th><p class="ParagraphX1 ENG rc-Primary in-line">Email</p></th>
+                                        <th><p class="ParagraphX1 ENG rc-Primary in-line">Booking amount</p></th>
+                                        <th><p class="ParagraphX1 ENG rc-Primary in-line">Delete</p></th>
+                                        <th><p class="ParagraphX1 ENG rc-Primary in-line">Backlist</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><p class="ParagraphX1 ENG rc-Primary">1</p></td>
+                                        <td><p class="ParagraphX1 ENG rc-Primary">Piyathida</p></td>
+                                        <td><p class="ParagraphX1 ENG rc-Primary">Choojan</p></td>
+                                        <td><p class="ParagraphX1 ENG rc-Primary">fai@hotmail.com</p></td>
+                                        <td><p class="ParagraphX1 ENG rc-Primary">2</p></td>
+                                        <td><p class="ParagraphX1 ENG rc-Primary"><i class=" del-mem material-icons rc-Error">delete</i></p></td>
+                                        <td><p class="ParagraphX1 ENG rc-Primary"> <input  class="btn-pop-bl rc-Primary TH ParagraphX1" type="submit" value="Backlist"></p></td>
+                                    </tr>
+                           
+                     
+                                </tbody>   
+                            </table>
+                        </div>
+                    </div> <!-- scroll-->
                 </div>
             </div>
         </div> <!-- col 2-->
     </body>
 </html>
 <script>
-var modalBook = document.getElementById("popUp-book");
-var spanBook = document.getElementsByClassName("close-book")[0];
+var modalList = document.getElementById("popUp-list");
+var spanList = document.getElementsByClassName("close-list")[0];
 function openCell() {
-    modalBook.style.display = "block";
+    modalList.style.display = "block";
 }
-spanBook.onclick = function() {
-    modalBook.style.display = "none";
+spanList.onclick = function() {
+    modalList.style.display = "none";
 }
 
 /* date time */
