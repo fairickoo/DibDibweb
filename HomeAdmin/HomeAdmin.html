@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html>
     <header>
-        <title>Home (User mode)</title>
+        <title>Home (Admin mode)</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/template/Global.css"> <!-- change -> /template/Global.css  -->
-        <link rel="stylesheet" href="HomeUser.css"> <!-- Edit name for import Css of this document -->
+        <link rel="stylesheet" href="HomeAdmin.css"> <!-- Edit name for import Css of this document -->
     </header>
     <body class="BGG">
         <div class="topnav">
-            <div class="right">
-                <a href="#"><i class="material-icons md-20 rc-Muted ">refresh</i></a>
-                <a href="#"><i class="material-icons md-20 rc-Muted ">add_shopping_cart</i><mark class="noti-cart Label ENG rc-Bright">30</mark></a>
-                <p class="ParagraphX2 ENG rc-Muted" href="#">Quota: 4</p>
-                <a id="openPopUp-account" target="_parent"><i class="material-icons md-20 rc-Success ">account_circle</i></a>
+            <div class="topnav">
+                <div class="right">
+                    <a href="#"><i class="material-icons md-20 rc-Muted ">refresh</i></a>
+                    <a class="ParagraphX2 ENG rc-Muted" href="#">Admin</a>
+                    <a id="checkLogout" onclick="logout()"class="ParagraphX2 ENG rc-Muted" href="../LoginSignup/Login.html">Logout</a>
+                </div>
             </div>
         </div>
         <!--  wave -->
@@ -48,7 +49,7 @@
             <div class="div3grid-area">
                 <a href="#">
                     <div class="card-preview DS-SS">
-                        <img class="img-card" src="/Assets/ImageRoom501.png" alt="Room602" >
+                        <img class="img-card" src="/Assets/ImageRoom501.png" alt="Room501" >
                         <p class="HeadingX6 ENG rc-Primary"><b>ECC-501</b></p>
                         <p class="ParagraphX1 ENG rc-Primary">Xilinx Spartan-6 FPGA</p>
                         <table border="0" >
@@ -73,7 +74,7 @@
             <div class="div4grid-area">
                 <a href="#">
                     <div class="card-preview DS-SS">
-                        <img class="img-card" src="/Assets/ImageRoom502.png" alt="Room602" >
+                        <img class="img-card" src="/Assets/ImageRoom502.png" alt="Room502" >
                         <p class="HeadingX6 ENG rc-Primary"><b>ECC-502</b></p>
                         <p class="ParagraphX1 ENG rc-Primary">YIHUA-948 (2 in 1)</p>
                         <table border="0" >
@@ -98,7 +99,7 @@
             <div class="div5grid-area">
                 <a href="#">
                     <div class="card-preview DS-SS">
-                        <img class="img-card" src="/Assets/ImageRoom504.png" alt="Room602" >
+                        <img class="img-card" src="/Assets/ImageRoom504.png" alt="Room504" >
                         <p class="HeadingX6 ENG rc-Primary"><b>ECC-504</b></p>
                         <p class="ParagraphX1 ENG rc-Primary">MULTI METER DT1008</p>
                         <table border="0" >
@@ -123,7 +124,7 @@
             <div class="div8grid-area">
                 <a href="#">
                     <div class="card-preview DS-SS">
-                        <img class="img-card" src="/Assets/ImageRoom601.png" alt="Room602" >
+                        <img class="img-card" src="/Assets/ImageRoom601.png" alt="Room601" >
                         <p class="HeadingX6 ENG rc-Primary"><b>ECC-601</b></p>
                         <p class="ParagraphX1 ENG rc-Primary">STANLEY SCH12S2-B1 </p>
                         <table border="0" >
@@ -169,20 +170,29 @@
                     </div>
                 </a>
             </div>
-        </div>
 
-         <!--  pop up account-->
-         <div id="popUp-account" class="modal">
-            <div class="modal-content DS-SS">
-                <span class="close"> <i class="material-icons rc-Secondary">close</i></span>
-                <h1 class="HeadingX4 ENG rc-Primary">Reset Password</h1><br class="brr md-h10">
-                <p class="ParagraphX1 ENG rc-Primary">Enter your email for a password reset link.</p><br class="brr md-h25">
-                <span class="ParagraphX2 ENG rc-Secondary">Email</span><br class="brr md-h10">
-                <input class="input-login" type="email" name="email"> <br class="brr md-h35">
-                <input onclick="sentResetLink()" class="btn-login rc-BG ENG HeadingX6" type="submit" value="Send Reset Link">
+            <div class="div10grid-area">
+                <a href="#">
+                    <div class="card-preview DS-SS">
+                        <img class="img-card" src="/Assets/ImageRoomMember.png" alt="Member" >
+                        <p class="HeadingX6 ENG rc-Primary"><b>Member</b></p>
+                        <p class="ParagraphX1 ENG rc-Primary">Manage members</p>
+                        <table border="0" >
+                            <tr>
+                                <td><p class="Label TH rc-Secondary in-line">Register:</p></td>
+                                <td><p class="Label TH rc-Secondary in-line ">&nbsp;&nbsp;23</p></td>
+                                
+                            </tr>
+                                <td><p class="Label TH rc-Secondary in-line">Blacklist:</p></td>
+                                <td><p class="Label TH rc-Secondary in-line ">&nbsp;&nbsp;4</p></td>
+                                
+                            
+                        </table>
+                    </div>
+                </a>
             </div>
-        </div>
 
+        </div> 
     </body>
 </html>
 
