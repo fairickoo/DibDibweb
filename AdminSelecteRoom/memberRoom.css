@@ -4,9 +4,9 @@ body.BGG{
     background: var(--Grey6);/*เปลี่ยนสี BG ตาม UI ของแต่ละหน้า */
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-size: cover;   
 }
+
 footer.container-wave {
     position: fixed;
     left: 0;
