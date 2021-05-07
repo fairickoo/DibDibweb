@@ -13,11 +13,10 @@
     <body class="BGG unselectable ">
         <div class="topnav">
             <div class="right">
-                <a href="#"><i class="material-icons md-20 rc-Muted ">refresh</i></a>
-                <a href="#"><i class="material-icons md-20 rc-Muted ">add_shopping_cart</i><mark class="noti-cart Label ENG rc-Bright">30</mark></a>
+                <a ><i class="material-icons md-20 rc-Muted ">refresh</i></a>
+                <a id="openPopUp-cart" target="_parent"><i class="material-icons md-20 rc-Muted ">add_shopping_cart</i><mark class="noti-cart Label ENG rc-Bright">30</mark></a>
                 <p class="ParagraphX2 ENG rc-Muted" href="#">Quota: 4</p>
-                <a href="#"><i class="material-icons md-20 rc-Success ">account_circle</i></a>
-               <!-- <a id="checkLogout" onclick="logout()"class="ParagraphX2 ENG rc-Muted" href="../LoginSignup/Login.html">Logout</a>-->
+                <a id="openPopUp-account" target="_parent"><i class="material-icons md-20 rc-Success ">account_circle</i></a>
             </div>
         </div>
         <footer class="container-wave">
@@ -160,21 +159,171 @@
                     </table>
                 </div>
             </div>
-            <div class="div6-grid">6 </div>
+            <!-- <div class="div6-grid">6 </div> -->
         </div><!-- parent card-->
     </div>
          <!--  pop up account-->
+        <div id="popUp-account"class="modal">
+            <div class="modal-content DS-SS">
+                <div id="openPopUp-accountSetting" class="accountSetting ">
+                    <p class="ParagraphX2 ENG rc-Secondary">Account Setting</p>
+                </div>
+                <div class="logout">
+                    <p class="ParagraphX2 ENG rc-Secondary">Logout</p>
+                </div>
+            </div>
+        </div>
+
+        <!--  pop up accountSetting-->
+        <div id="popUp-accountSetting" class="modal-accSet">
+            <div class="modal-content-accSet DS-SS">
+                <span class="close"> <i class="material-icons rc-Secondary">close</i></span>
+                <h1 class="HeadingX4 ENG rc-Primary">Account Setting</h1><br class="brr md-h5">
+                <p class="ParagraphX1 ENG rc-Primary">Change your information</p><br class="brr md-h15">
+
+                <span class="ParagraphX2 ENG rc-Secondary">First Name</span><br class="brr md-h5">
+                <input class="input-login" type="text" name="firstName"> <br class="brr md-h20">
+
+                <span class="ParagraphX2 ENG rc-Secondary">Last Name</span><br class="brr md-h5">
+                <input class="input-login" type="text" name="lastName"> <br class="brr md-h20">
+                
+                <span class="ParagraphX2 ENG rc-Secondary">Email</span><br class="brr md-h5">
+                <input class="input-login" type="email" name="email"> <br class="brr md-h20">
+
+                <span class="ParagraphX2 ENG rc-Secondary">New Password</span><br class="brr md-h5">
+                <input class="input-login" type="password" name="newPassword"> <br class="brr md-h20">
+
+                <span class="ParagraphX2 ENG rc-Secondary">Current Password</span><br class="brr md-h5">
+                <input class="input-login" type="password" name="currentPassword"> <br class="brr md-h20">
+
+                <input onclick="sentResetLink()" class="btn-login rc-BG ENG HeadingX6" type="submit" value="Save">
+            </div>
+        </div>
+
+        <!--  pop up cart-->
+        <div id="popUp-cart" class="modal-cart">
+            <div class="modal-content-cart DS-SS">
+                <span class="close-cart"> <i class="material-icons rc-Secondary">close</i></span>
+                <p class="HeadingX5 ENG rc-Primary in-line margin10"><b>Equipment reservation list</b></p>
+                <form class="month-sel in-line" action="/action_page.php">
+                    <input class="calendar ParagraphX1 ENG rc-Primary" type="month" id="monthUser" name="monthUser">
+                </form>
+                <div  class="scroll-table-mem" >
+                    <button type="button" class="collapsible ParagraphX1 ENG rc-Primary">14 / 02 / 2021</button>
+                    <div class="content">
+                        <div class="container-table ">
+                            <table class="w3-table w3-bordered "  >
+                                <tbody>
+                                    <tr>
+                                        <td><p class="HeadingX6 ENG rc-Primary">ECC-602 :</p></td>
+                                        <td><p class="HeadingX6 ENG rc-Secondary">STM32-nucleo f767zi</p></td>
+                                        <td><p class="HeadingX6 ENG rc-Secondary">10:00</p></td>
+                                        <td><p class="HeadingX6 ENG rc-Secondary">-</p></td>
+                                        <td><p class="HeadingX6 ENG rc-Secondary">11:00</p></td>
+                                        <td><p class="HeadingX6 TH rc-Secondary">น.</p></td>
+                                        <td><p class="HeadingX6 ENG rc-Secondary">2</p></td>
+                                        <td><p class="HeadingX6 TH rc-Secondary">เครื่อง</p></td>
+                                        <td><p class="HeadingX6 ENG rc-Secondary"><input  class="btn-pop-bl rc-Primary TH ParagraphX1" type="submit" value="Cancel"></p></td>
+                                    
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <button type="button" class="collapsible ParagraphX1 ENG rc-Primary">15 / 02 / 2021</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button type="button" class="collapsible ParagraphX1 ENG rc-Primary">21 / 02 / 2021</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+
+                    <button type="button" class="collapsible ParagraphX1 ENG rc-Primary">26 / 02 / 2021</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+        
+                </div> <!-- scroll-->
+            </div>
+        </div>
+
     </body>
 </html>
-<script>
-function goRoom (){
-    document.getElementById("roomID").href="../UserSelecteRoom/userSelecteRoom.html"; 
-}
 
-function logout(){
-    var logout = confirm("Confirm to Log out")
-    if (!logout){
-        document.getElementById("checkLogout").href="./adminSelecteRoom.html"; 
+<!-- JS for link page -->
+<script>
+    function goRoom (){
+        document.getElementById("roomID").href="../UserSelecteRoom/userSelecteRoom.html"; 
     }
-}
+
+    function logout(){
+        var logout = confirm("Confirm to Log out")
+        if (!logout){
+            document.getElementById("checkLogout").href="./adminSelecteRoom.html"; 
+        }
+    }
+
+    var modal = document.getElementById("popUp-account");
+    var btn = document.getElementById("openPopUp-account");
+
+    var modal1 = document.getElementById("popUp-accountSetting");
+    var btn1 = document.getElementById("openPopUp-accountSetting");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    btn1.onclick = function() {
+        modal1.style.display = "block";
+    }
+    span.onclick = function() {
+        modal1.style.display = "none";
+    }
+    function sentResetLink () {
+        alert("The system has successfully sent a link to reset your password.")
+    }
+
+    var modalCart = document.getElementById("popUp-cart");
+    var btnCart = document.getElementById("openPopUp-cart");
+    var spanCart = document.getElementsByClassName("close-cart")[0];
+
+    btnCart.onclick = function() {
+        modalCart.style.display = "block";
+    }
+    spanCart.onclick = function() {
+        modalCart.style.display = "none";
+    }
+
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            }
+            else {
+                content.style.display = "block";
+            }
+        });
+    }
+
+    /* date time */
+    var today = new Date();
+    var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var dateTime = date+' '+time;
+
 </script>
