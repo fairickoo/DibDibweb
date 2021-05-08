@@ -511,4 +511,18 @@ a{
     border-radius: 6px;
 }
 
+.btn-pop-bl{
+    background-color: var(--Bright);
+    border: 2px solid #4a494d;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 110px; 
+    height: 30px;
+    cursor: pointer;
+}
+.btn-pop-bl:hover{
+    background-color:  #4a494d;
+    color: var(--Bright);
+}
+
 /*@media screen and (min-width: 1200px) { }*/
